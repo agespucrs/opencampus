@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplos Canvas</title>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <script type="text/javascript" src="main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</head>
+  <body onload="bandeira()" class="container"">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>HTML, Canvas!</h1>
+       </div>
+    </div>
+    
+    <p class="text-info">Cores Primárias</p>
+    Selecione os valores para as cores RGB (Red / Green / Blue):<br>
+    
+    <table class="table table-hover">
+    <td>
+       Red / Vermelho 
+    </td>
+    <td>
+      <input type="number" class="inputCor" id="corR" name="corR" value="0" min="0" max="255" multiple="10">
+    </td>
+    <td>
+      Green / Verde 
+    </td>
+    <td>
+      <input type="number" class="inputCor" id="corG" name="corG" value="0" min="0" max="255" multiple="10">
+    </td>
+    <td>
+      Blue / Azul
+    </td>
+    <td>
+      <input type="number" class="inputCor" id="corB" name="corB" value="0" min="0" max="255" multiple="10">
+    </td>
+    <td>
+      <button class="btn-primary btn-lg" onclick="quadrados()">Misturar Cores </button>
+    </td>
+    </table>
+    <div class="quadrado" id="quadrado" align="center">
+      <canvas id="meucanvas" width="400" height="400">  </canvas>
+      <br>
+    </div>  
+<!--     <button onclick="tabuleiro()">Tabuleiro </button> -->
+    <button class="btn-primary btn-lg" onclick="bandeira()">Bandeira </button>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+	<script language="javascript"> 
+		var posx = 0;
+		var posy = 0;
+		var alphaRandom = 0;
+
+		function init(){
+			var ctx = document.getElementById('meucanvas').getContext('2d');
+
+			for(i= 0; i < 250; i++){
+				posx = Math.random()*340;
+				posy = Math.random()*340;
+				alphaRandom = Math.random();
+
+				ctx.fillStyle = 'rgba(230,0,0,' + alphaRandom +')' ;
+				ctx.fillRect(posx, posy, 15, 15);
+			}
+
+		}
+	</script>
+</head>
+<body onload="init()">
+
+
+	<svg width="300" height="200">
+		<polygon points="100,10 40,198 190,78 10,78 160,198"
+		style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+		Sorry, your browser does not support inline SVG.
+	</svg>
+	<svg width="200" height="200">
+		<polygon points="100,1 40,200 200,78 1,78 160,200"
+		style="fill:blue;stroke:red;stroke-width:10;fill-rule:evenodd;" />
+		Sorry, your browser does not support inline SVG.
+	</svg>
+
+	<canvas id="meucanvas" width="400" height="400"> </canvas>
+</body>
+</html>
